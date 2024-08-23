@@ -15,6 +15,9 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        btn: "var(--shadow-inset)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,7 +60,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        code: ["var(--font-code)"],
       },
       keyframes: {
         "accordion-down": {

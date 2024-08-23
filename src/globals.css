@@ -5,9 +5,7 @@
 
 @layer base {
   :root {
-    font-family: "Proxima Nova", system-ui, sans-serif;
-
-    --font-code: "JetBrains Mono Variable", "Roboto", monospace;
+    font-family: "JetBrains Mono Variable", monospace, sans-serif;
 
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
@@ -39,6 +37,9 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+    --shadow-inset: inset 1px 1px 0 hsla(0, 0%, 100%, 0.4),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.3);
   }
 
   .dark {
