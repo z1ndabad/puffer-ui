@@ -23,5 +23,6 @@ example
 *.njsproj
 *.sln
 *.sw?
+.tmuxp.*
 
 *storybook.log
