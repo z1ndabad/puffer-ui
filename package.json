@@ -1,6 +1,6 @@
 {
-  "name": "shadcn-uilib-starter",
-  "description": "Starter for React + Tailwind + Shadcn-ui component libs",
+  "name": "puffer-ui",
+  "description": "Retro/terminal-styled component library inspired by, and not affiliated with, turbopuffer.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -56,6 +56,7 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.41",
     "postcss-cli": "^11.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "storybook": "^8.2.9",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
