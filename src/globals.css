@@ -87,3 +87,22 @@
       "calt" 1;
   }
 }
+
+@layer utilities {
+  .dot-shadow {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 4px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: inherit;
+      background-repeat: repeat repeat;
+      background-image: url(/dotted.svg);
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}

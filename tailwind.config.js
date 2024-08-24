@@ -77,31 +77,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    //TODO: refactor into new file?
-    //TODO: how to allow color customization?
-    plugin(function ({ addUtilities }) {
-      const newUtility = {
-        ".dot-shadow": {
-          position: "relative",
-          "&::after": {
-            content: '""',
-            position: "absolute",
-            top: "4px", // TODO: new var --shadow-topleft
-            left: "4px", // TODO: new var --shadow-topleft
-            right: "-5px", // TODO: new var --shadow-bottomright
-            bottom: "-5px", // TODO: new var --shadow-bottomright
-            borderRadius: "inherit",
-            backgroundRepeat: "repeat repeat", // unnecessary, but better to be explicit?
-            backgroundImage: `url(/dotted.svg)`,
-            pointerEvents: "none",
-            zIndex: "-1",
-          },
-        },
-      };
-
-      addUtilities(newUtility);
-    }),
-  ],
+  plugins: [require("tailwindcss-animate")],
 };
