@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./Button";
 
@@ -38,4 +39,32 @@ const Secondary: Story = {
   },
 };
 
-export { Default, Destructive, Outline, Secondary };
+const Ghost: Story = {
+  args: {
+    variant: "ghost",
+    children: content,
+  },
+};
+
+const Link: Story = {
+  args: {
+    variant: "link",
+    children: content,
+  },
+};
+
+const Performance: Story = {
+  render: () => {
+    const buttonArr = [];
+    for (let i = 0; i < 1000; i++) {
+      buttonArr.push(
+        <Button key={i} variant={"destructive"}>
+          Button
+        </Button>,
+      );
+    }
+    return <div>{buttonArr}</div>;
+  },
+};
+
+export { Default, Destructive, Outline, Secondary, Ghost, Link, Performance };

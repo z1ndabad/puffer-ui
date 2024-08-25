@@ -2,6 +2,10 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import * as cssAnimate from "tailwindcss-animate";
 
+function colorMix(rgbColor: string) {
+  return `color-mix(in srgb, ${rgbColor} calc(100% * <alpha-value>), transparent)`;
+}
+
 export default {
   darkMode: ["class"],
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -25,24 +29,26 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)",
+          DEFAULT: colorMix("var(--primary)"),
+          foreground: colorMix("var(--primary-foreground)"),
+          hover: colorMix("var(--primary-hover)"),
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "var(--secondary-foreground)",
+          DEFAULT: colorMix("var(--secondary)"),
+          foreground: colorMix("var(--secondary-foreground)"),
+          hover: colorMix("var(--secondary-hover)"),
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: colorMix("var(--destructive)"),
+          foreground: colorMix("var(--destructive-foreground)"),
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: colorMix("var(--accent)"),
+          foreground: colorMix("var(--accent-foreground)"),
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
