@@ -57,8 +57,8 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: colorMix("var(--card)"),
+          foreground: colorMix("var(--card-foreground)"),
         },
       },
       borderRadius: {

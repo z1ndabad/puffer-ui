@@ -4,54 +4,37 @@ import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  argTypes: {
+    variant: {
+      options: [
+        "default",
+        "destructive",
+        "outline",
+        "secondary",
+        "ghost",
+        "link",
+      ],
+      control: { type: "select" },
+    },
+    size: {
+      options: ["default", "sm", "lg", "icon"],
+      control: { type: "select" },
+    },
+  },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
-const content = "Button";
-
 // TODO: Generate stories for all variants + sizes + disabled automatically
 // Getting variants programmatically from cva() is not supported yet, watch
 // https://github.com/joe-bell/cva/discussions/146
-export const Default: Story = {
+
+type Story = StoryObj<typeof Button>;
+const content = "Button";
+
+export const Primary: Story = {
   args: {
     variant: "default",
-    children: content,
-  },
-};
-
-export const Destructive: Story = {
-  args: {
-    variant: "destructive",
-    children: content,
-  },
-};
-
-export const Outline: Story = {
-  args: {
-    variant: "outline",
-    children: content,
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    variant: "secondary",
-    children: content,
-  },
-};
-
-export const Ghost: Story = {
-  args: {
-    variant: "ghost",
-    children: content,
-  },
-};
-
-export const Link: Story = {
-  args: {
-    variant: "link",
     children: content,
   },
 };
