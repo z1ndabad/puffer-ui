@@ -5,20 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-sm text-sm font-medium shadow-btn transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-700 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "hover:shadow-btn-hover active:shadow-btn-active inline-flex items-center justify-center whitespace-nowrap rounded-sm text-sm font-medium shadow-btn transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-700 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "border border-primary-foreground bg-primary text-primary-foreground shadow-btn hover:bg-primary-hover",
+          "border border-primary-foreground bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-hover",
         destructive:
-          "border border-secondary-foreground bg-destructive text-destructive-foreground hover:bg-destructive/50",
+          "border border-secondary-foreground bg-destructive text-destructive-foreground hover:bg-destructive/50 active:bg-destructive/50",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground active:bg-accent",
         secondary:
-          "border border-secondary-foreground bg-secondary text-secondary-foreground shadow-btn hover:bg-secondary-hover",
+          "border border-secondary-foreground bg-secondary text-secondary-foreground hover:bg-secondary-hover active:bg-secondary-hover",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "text-primary-foreground underline-offset-4 hover:underline disabled:underline",
       },
       size: {
         default: "h-10 px-4 py-2",
