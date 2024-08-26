@@ -20,7 +20,9 @@ export default {
     },
     extend: {
       boxShadow: {
-        btn: "var(--shadow-inset)",
+        btn: "var(--shadow-btn)",
+        "btn-hover": "var(--shadow-btn-hover)",
+        "btn-active": "var(--shadow-btn-active)",
       },
       colors: {
         border: "hsl(var(--border))",

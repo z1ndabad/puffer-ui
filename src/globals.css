@@ -40,8 +40,14 @@
 
     --radius: 0.5rem;
 
-    --shadow-inset: inset 1px 1px 0 hsla(0, 0%, 100%, 0.4),
-      inset -1px -1px 0 rgba(0, 0, 0, 0.3);
+    --shadow-btn: inset 1px 1px 0 hsla(0, 0%, 100%, 0.4),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.3), 3px 3px 0 rgba(0, 0, 0, 0.2);
+
+    --shadow-btn-hover: inset 1px 1px 0 hsla(0, 0%, 100%, 0.3),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.3), 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+    --shadow-btn-active: 1px 1px 0 hsla(0, 0%, 100%, 0.5),
+      inset 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   .dark {
