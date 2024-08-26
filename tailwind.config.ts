@@ -2,7 +2,6 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import * as cssAnimate from "tailwindcss-animate";
 
-// TODO: review adding prefix to exported styles
 function colorMix(rgbColor: string) {
   return `color-mix(in srgb, ${rgbColor} calc(100% * <alpha-value>), transparent)`;
 }
@@ -58,8 +57,8 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: colorMix("var(--card)"),
+          foreground: colorMix("var(--card-foreground)"),
         },
       },
       borderRadius: {
