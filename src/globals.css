@@ -19,7 +19,7 @@
     --border: theme(colors.slate.200);
     --input: theme(colors.slate.200);
 
-    --card: white;
+    --card: theme(colors.slate.50);
     --card-foreground: theme(colors.slate.900);
 
     --primary: theme(colors.slate.200);
